@@ -1,0 +1,101 @@
+/*
+
+app-template.css overrides
+
+remove this comment if used
+remove this file if not
+
+*/
+
+.nav-bar, .nav-bar-bot {
+    color: #777;
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-bar {
+    height: 20px;
+}
+
+.nav-bar-bot {
+    text-align: inherit;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+}
+
+.filters-bot {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    right: 0;
+    left: 0;
+}
+
+.nav-bar-bot div {
+    display: inline-block;
+    width: 20%;
+    order: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+
+.nav-bar-bot li a.selected {
+    border-color: rgba(175, 47, 47, 0.2);
+}
+
+.nav-bar-bot li a {
+    color: inherit;
+    margin: 3px;
+    padding: 3px 7px;
+    text-decoration: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.nav-input {
+    float: left;
+    text-align: left;
+    margin-right: 12px;
+    margin-top: -2px;
+    width: 22%;
+    padding: 4px 8px 4px 8px;
+    border: none;
+    background: rgba(0, 0, 0, 0.003);
+    box-shadow: inset 0 -2px 1px rgba(175, 47, 47, 0.15);
+}
+
+/*.clear-completed, html .clear-completed:active {*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*line-height: 20px;*/
+    /*text-decoration: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
+.show-all-lists, html .show-all-lists:active {
+    float: left;
+    position: relative;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup {
+    padding-right: 5px;
+}

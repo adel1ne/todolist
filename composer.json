@@ -1,0 +1,10 @@
+{
+    "config": {
+        "github-oauth": {
+            "github.com": "d5ecd5670b463f47618da5e7269af825829ff344"
+        }
+    },
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4"
+    }
+}
