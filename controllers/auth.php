@@ -123,19 +123,6 @@ class Auth extends Controller {
 		echo $authWidget->getView();
 	}
 
-//	public function showMessage() {
-//		$error = (int) $_GET['error'];
-//		if (!$error) {
-//			$view_name = 'message';
-//		} else {
-//			$view_name = 'error_message';
-//		}
-//		$authWidget = new AuthWidget($view_name, [
-//			'msg' => $_GET['msg']
-//		]);
-//		echo $authWidget->getView();
-//	}
-
 	public function showAuthorized() {
 		$view_name = 'authorized';
 		$authWidget = new AuthWidget($view_name, [
@@ -158,8 +145,8 @@ class Auth extends Controller {
 	private function sendMail($email,$confirm_url) {
 		// Create the SMTP Transport
 		$transport = (new \Swift_SmtpTransport('smtp.gmail.com', 465,'ssl'))
-			->setUsername('adel1ne4891@gmail.com')
-			->setPassword('xvrgpaguiswidhqs');
+			->setUsername('lsabot413@gmail.com')
+			->setPassword('njgxdkytmoewjnzx');
 
 		// Create the Mailer using your created Transport
 		$mailer = new \Swift_Mailer($transport);
