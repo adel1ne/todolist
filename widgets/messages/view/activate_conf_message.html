@@ -1,0 +1,14 @@
+<?php switch($data['conf_response']):
+case 1: ?>
+<span class="clear-completed message">Successful confirmation! Now you can login!</span>
+<?php break; ?>
+<?php case 2: ?>
+<span class="clear-completed message">Confirmation error! Try later!</span>
+<?php break; ?>
+<?php case 3: ?>
+<span class="clear-completed message">Confirmation time expired! Try signup once again!</span>
+<?php break; ?>
+<?php case 4: ?>
+<span class="clear-completed message">This code is already activated!</span>
+<?php break; ?>
+<?php endswitch; ?>

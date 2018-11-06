@@ -1,0 +1,10 @@
+<?php foreach ($data['tasks'] as $task): ?>
+<li class="<?=($task['status'])?'completed':''?>" id="<?=$task['id']?>">
+    <div class="view">
+        <input class="toggle" type="checkbox" <?=($task['status'])?'checked':''?>>
+        <label><?=$task['task_name']?></label>
+        <button class="destroy"></button>
+    </div>
+    <input class="edit" value="<?=$task['task_name']?>">
+</li>
+<?php endforeach; ?>

@@ -1,0 +1,3 @@
+<?php foreach ($data['lists'] as $list): ?>
+<div class="<?=((int) $list['id'] === (int) $data['active_list'])?'selected':''?>" id="mainlst-<?=$list['id']?>"><?=$list['list_name']?></div>
+<?php endforeach; ?>

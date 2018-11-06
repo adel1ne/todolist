@@ -7,7 +7,23 @@ remove this file if not
 
 */
 
-.nav-bar, .nav-bar-bot {
+/*div.nav-bar.info-message {*/
+    /*display: none;*/
+/*}*/
+
+div.nav-bar.info-message span {
+    float: none;
+}
+
+div.nav-bar.info-message.error-message {
+    color: rgba(175, 47, 47, 0.7);
+}
+
+div.nav-bar.info-message.success-message {
+    color: rgba(0, 179, 0, 0.7);
+}
+
+.nav-bar, .nav-bar-lists {
     color: #777;
     padding: 10px 15px;
     text-align: center;
@@ -18,9 +34,9 @@ remove this file if not
     height: 20px;
 }
 
-.nav-bar-bot {
+.nav-bar-lists {
     text-align: inherit;
-    display: flex;
+    /*display: none;*/
     -webkit-flex-direction: row;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,7 +57,7 @@ remove this file if not
     left: 0;
 }
 
-.nav-bar-bot div {
+.nav-bar-lists div {
     display: inline-block;
     width: 20%;
     order: 0;
@@ -55,17 +71,23 @@ remove this file if not
     align-self: auto;
 }
 
-.nav-bar-bot li a.selected {
+.nav-bar-lists div.selected {
     border-color: rgba(175, 47, 47, 0.2);
 }
 
-.nav-bar-bot li a {
+.nav-bar-lists div:hover {
+    border-color: rgba(175, 47, 47, 0.2);
+}
+
+.nav-bar-lists div {
     color: inherit;
-    margin: 3px;
-    padding: 3px 7px;
+    margin: 7px 3px;
+    padding: 1px 7px;
     text-decoration: none;
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
+    border-left: 3px solid #e6e6e6;
+    /*border-radius: 3px;*/
+    line-height: 1em;
+    cursor: pointer;
 }
 
 .nav-input {
@@ -80,6 +102,37 @@ remove this file if not
     box-shadow: inset 0 -2px 1px rgba(175, 47, 47, 0.15);
 }
 
+button.clear-completed.login, button.clear-completed.signup,
+span.clear-completed.message, button.clear-completed.list-save,
+span.clear-completed.list-label {
+    float: left;
+}
+
+span.clear-completed.message, span.clear-completed.authorized, span.clear-completed.list-label {
+    cursor: inherit;
+}
+
+span.clear-completed.list-label {
+    margin-right: 5px;
+}
+
+span.clear-completed.message.error {
+    float: none;
+    color: rgba(175, 47, 47, 0.7);
+}
+
+span.clear-completed.message:hover, span.clear-completed.authorized:hover, span.clear-completed.list-label {
+    text-decoration: none;
+}
+
+.nav-input[type="email"] {
+    width: 30%;
+}
+
+.nav-input[type="password"] {
+    width: 15%;
+}
+
 /*.clear-completed, html .clear-completed:active {*/
     /*float: right;*/
     /*position: relative;*/
@@ -88,7 +141,11 @@ remove this file if not
     /*cursor: pointer;*/
 /*}*/
 
-.show-all-lists, html .show-all-lists:active {
+.show-all-lists {
+    /*display: none;*/
+}
+
+.show-all-lists, html .show-all-lists:active, .hide-all-lists, html .hide-all-lists:active {
     float: left;
     position: relative;
     line-height: 20px;
@@ -96,6 +153,18 @@ remove this file if not
     cursor: pointer;
 }
 
-.signup {
+.show-signup {
     padding-right: 5px;
 }
+
+span.list {
+    font-weight: bold;
+}
+
+.back, .exit, .list-close {
+    padding-left: 5px;
+}
+
+/*.toggle-all.tasks-empty + label:before {*/
+    /*content: none;*/
+/*}*/
